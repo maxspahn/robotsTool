@@ -1,4 +1,5 @@
 #include <util.h>
+#include <stdio.h>
 
 double** computeTransformationMatrix(double angle, double l)
 {
@@ -42,5 +43,15 @@ double** multiplyMatrices(double** a, double** b)
     }
   }
   return res;
+}
+
+void printMatrix(double** a)
+{
+  for (int i = 0; i < 4; ++i) {
+    for (int j = 0; j < 4; ++j) {
+      printf("%1.4f\t", a[i][j]);
+    }
+    printf("\n");
+  }
 }
 
